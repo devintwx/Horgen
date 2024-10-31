@@ -4,19 +4,47 @@
 <head>
     <title>2Monsters</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Iframe Styling */
+        #frame iframe {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            z-index: 1;
+            /* Lower z-index to place iframe behind footer */
+        }
+
+        /* Footer Styling */
+        #footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 1000;
+            /* Higher z-index to place footer on top of iframe */
+            background-color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: x-small;
+            color: dimgray;
+        }
+    </style>
 </head>
 
 <body>
 
     <div id="frame">
-        <iframe src="https://store12741.store.link/"
-            style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden;">
-        </iframe>
+        <iframe src="https://store12741.store.link/"></iframe>
     </div>
 
     <!-- Footer positioned on top of the iframe -->
-    <footer id="footer"
-        style="position:fixed; bottom:0; width:100%; z-index:1000; background-color:#fff; text-align:center; padding:10px; font-family: Arial, Helvetica, sans-serif; font-size: x-small; color: dimgray;">
+    <footer id="footer">
         &copy; 2Monsters | Powered by <a href="https://instagram.com/devintwx" target="_blank"
             style="color: dimgray; text-decoration: underline;">DEVIN</a>
     </footer>
