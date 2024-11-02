@@ -4,26 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullscreen Responsive Iframe</title>
+    <title>Fullscreen Responsive Iframe with Overlay Footer</title>
     <style>
-        /* Reset default body margins */
-        body,
-        html {
+        /* Reset default body and html margins */
+        body, html {
             margin: 0;
             padding: 0;
             height: 100%;
             overflow: hidden;
         }
 
-        /* Iframe styles for fullscreen */
+        /* Fullscreen iframe styling */
         .iframe-fullscreen {
-            position: fixed;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
             border: none;
-            /* Removes border */
+        }
+
+        /* Overlay footer styling */
+        footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+            font-size: 10px;
+            color: #575757;
+        }
+
+        /* Link styling */
+        footer a {
+            color: #575757;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        /* Hover effect for link */
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -31,6 +53,8 @@
 <body>
 
     <iframe src="https://store12741.store.link" class="iframe-fullscreen"></iframe>
+
+    <footer>© 2Monsters | Powered by <a href="https://www.instagram.com/devintwx" target="_blank">DEVIN</a></footer>
 
 </body>
 
