@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullscreen Responsive Iframe with Overlay Footer</title>
+    <title>Fullscreen Responsive Iframe with Fixed Overlay Footer</title>
     <style>
         /* Reset default body and html margins */
         body,
@@ -25,14 +25,14 @@
             border: none;
         }
 
-        /* Overlay footer styling */
+        /* Fixed footer styling */
         footer {
-            position: absolute;
+            position: fixed;
             bottom: 0;
             width: 100%;
             text-align: center;
             padding: 10px;
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: rgb(255, 255, 255);
             /* Slightly transparent background */
             font-size: 10px;
             color: #575757;
@@ -46,7 +46,7 @@
         }
 
         /* Hover effect for link */
-        footer a {
+        footer a:hover {
             text-decoration: underline;
         }
     </style>
