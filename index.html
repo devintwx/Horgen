@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald&display=swap"
-    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2Monsters</title>
@@ -28,7 +28,6 @@
             width: 100vw;
             height: 100vh;
             border: none;
-            padding-bottom: 10px;
         }
 
         /* Fixed header styling */
@@ -73,6 +72,13 @@
         /* Hover effect for link */
         footer a {
             text-decoration: underline;
+        }
+
+        /* Add bottom margin for iframe on mobile */
+        @media (max-width: 768px) {
+            .iframe-fullscreen {
+                height: calc(100vh - 20px);
+            }
         }
     </style>
 </head>
