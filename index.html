@@ -2,9 +2,14 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fullscreen Responsive Iframe</title>
+    <title>2 Monsters</title>
     <style>
         /* Reset default body margins */
         body,
@@ -15,28 +20,36 @@
             overflow: hidden;
         }
 
-        /* Iframe styles for fullscreen */
+        /* Iframe styles for fullscreen with extra bottom space */
         .iframe-fullscreen {
-            position: fixed;
-            top: 0;
-            left: 0;
             width: 100vw;
-            height: 100vh;
+            height: calc(100vh - 50px);
             border: none;
-            /* Removes border */
         }
 
-        /* Overlay to cover footer */
-        .footer-cover {
+        /* Footer styles */
+        footer {
             position: fixed;
             bottom: 0;
-            left: 0;
             width: 100%;
-            height: 20px;
-            /* Adjust height to cover footer text */
-            background-color: white;
-            /* Or match the background color of the page */
-            z-index: 10;
+            height: 85px;
+            background-color: #f1f1f1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            color: #333;
+            z-index: 1;
+            /* Ensure it stays above the iframe */
+        }
+
+        footer a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -44,7 +57,10 @@
 <body>
 
     <iframe src="https://store12741.store.link" class="iframe-fullscreen"></iframe>
-    <div class="footer-cover"></div> <!-- Cover to hide the footer -->
+
+    <footer>
+        © 2Monsters | Powered by <a href="https://www.instagram.com/devintwx" target="_blank">DEVIN</a>
+    </footer>
 
 </body>
 
